@@ -7,6 +7,6 @@
 
 import UIKit
 
-class CashTextFieldDelegate: NSObject {
+class CashTextFieldDelegate: NSObject, UITextFieldDelegate {
 
 }
