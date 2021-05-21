@@ -13,13 +13,14 @@ class ZipcodeTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     
     // limit the # of characters in text field
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool{
         let count = textField.text?.count
         
-        if count == 5{
+        if count == 5 {
             textField.endEditing(true)
+            
+            return true
         }
+        return false
     }
-    
-
 }
